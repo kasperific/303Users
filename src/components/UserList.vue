@@ -1,8 +1,8 @@
 <template>
-  <div class="user-list">
+  <div class="user-list-section">
     <h1>List of Users</h1>
-    <ul v-for="user in users"  :user="user" :key="user.id">
-      <li>
+    <ul>
+      <li v-for="user in users"  :user="user" :key="user.id">
         <UserCard :user="user"  />
       </li>
     </ul>
@@ -40,18 +40,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
+
 ul {
   list-style-type: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
 }
 li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
-}
+
 </style>
