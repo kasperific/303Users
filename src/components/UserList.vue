@@ -3,7 +3,7 @@
     <h1>List of Users</h1>
     <ul v-for="user in users"  :user="user" :key="user.id">
       <li>
-        
+        <UserCard :user="user"  />
       </li>
     </ul>
   </div>
@@ -11,10 +11,12 @@
 
 <script>
 import axios from 'axios'
+import UserCard from '@/components/UserCard'
 
 export default {
   name: 'UserList',
-  props: {
+  components: {
+    UserCard
   },
   data () {
     return {
