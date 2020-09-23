@@ -20,7 +20,7 @@ export default {
 <style scoped>
     .user-card {
         padding: 1rem 3rem;
-        background-color:lightcyan;
+        background-color:oldlace;
         border-radius: 4px;
         margin-bottom: 1rem;
     }
